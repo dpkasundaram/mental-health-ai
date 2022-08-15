@@ -1,0 +1,32 @@
+version: "3.0"
+
+intents:
+  - greet
+  - supply_user_name_info:
+      use_entities: []
+
+entities:
+  - PERSON
+
+slots:
+  PERSON:
+    type: any
+    influence_conversation: False
+    mappings:
+    - entity: PERSON
+      type: from_entity
+    - type: from_entity
+      entity: PERSON
+
+responses:
+  utter_greet:
+  - text: Hello! I am Aura your AI therapist :-) Nice to meet you!
+  utter_ask_for_user_name_info:
+  - text: Hello! May I know whom i am talking with ?
+  utter_acknowledge_provided_info:
+  - text: Hello {PERSON},How can i help you?
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
