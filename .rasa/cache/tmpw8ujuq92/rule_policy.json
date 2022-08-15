@@ -1,0 +1,32 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"depression_cause\"}}]": "utter_depression_cause",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"depression_cause\"}}, {\"prev_action\": {\"action_name\": \"utter_depression_cause\"}, \"user\": {\"intent\": \"depression_cause\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"depression_meaning\"}}]": "utter_depression_meaning",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"depression_meaning\"}}, {\"prev_action\": {\"action_name\": \"utter_depression_meaning\"}, \"user\": {\"intent\": \"depression_meaning\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"types_of_depression\"}}]": "utter_types_of_depression",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"types_of_depression\"}}, {\"prev_action\": {\"action_name\": \"utter_types_of_depression\"}, \"user\": {\"intent\": \"types_of_depression\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"top_depression_age_group\"}}]": "utter_top_depression_age_group",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"top_depression_age_group\"}}, {\"prev_action\": {\"action_name\": \"utter_top_depression_age_group\"}, \"user\": {\"intent\": \"top_depression_age_group\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"top_depression_country\"}}]": "utter_top_depression_country",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"top_depression_country\"}}, {\"prev_action\": {\"action_name\": \"utter_top_depression_country\"}, \"user\": {\"intent\": \"top_depression_country\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"types_of_depression\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"top_depression_country\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"top_depression_age_group\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"top_depression_country\"}}, {\"prev_action\": {\"action_name\": \"utter_top_depression_country\"}, \"user\": {\"intent\": \"top_depression_country\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"depression_cause\"}}, {\"prev_action\": {\"action_name\": \"utter_depression_cause\"}, \"user\": {\"intent\": \"depression_cause\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"types_of_depression\"}}, {\"prev_action\": {\"action_name\": \"utter_types_of_depression\"}, \"user\": {\"intent\": \"types_of_depression\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"depression_cause\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"top_depression_age_group\"}}, {\"prev_action\": {\"action_name\": \"utter_top_depression_age_group\"}, \"user\": {\"intent\": \"top_depression_age_group\"}}]",
+      "predicting default action with intent restart"
+    ]
+  }
+}

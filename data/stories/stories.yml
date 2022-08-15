@@ -1,0 +1,185 @@
+version: "3.0"
+
+stories:
+
+- story: A patient seeking support
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+  - action: utter_acknowledge_provided_info
+
+- story: Depression
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+  - action: utter_acknowledge_provided_info
+  - intent: depression_meaning
+  - action: utter_depression_meaning
+  - intent: depression_cause
+  - action: utter_depression_cause
+  - intent: top_depression_age_group
+  - action: utter_top_depression_age_group
+  - intent: treatment
+  - action: utter_treatment
+  - intent: difference_psychotherapy_counselling
+  - action: utter_difference_psychotherapy_counselling
+  - intent: thanks
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: Self_harm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+    entities:
+      - PERSON
+  - slot_was_set:
+    - PERSON
+  - action: utter_acknowledge_provided_info
+  - intent: mood_unhappy
+  - action: utter_feeling_depressed
+  - intent: self_harm
+  - action: utter_self_harm
+  - intent: self_doubt
+  - action: utter_self_doubt
+  - intent: control_thoughts
+  - action: utter_control_thoughts
+  - intent: try
+  - action: utter_reassurance
+  - intent: thanks
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+- story: feeling anxious
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+    entities:
+      - PERSON 
+  - slot_was_set:
+    - PERSON
+  - action: utter_acknowledge_provided_info
+  - intent: mood_nervous
+  - action: utter_feeling_nervous
+  - intent: mood_scared
+  - action: utter_feeling_scared
+  - intent: anxiety_stages
+  - action: utter_anxiety_stages
+  - intent: anxiety_attack_last
+  - action: utter_anxiety_attack_last
+  - intent: 333_rule
+  - action: utter_333_rule
+  - intent: thanks
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: mental health
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+    entities:
+      - PERSON 
+  - slot_was_set:
+    - PERSON
+  - action: utter_acknowledge_provided_info
+  - intent: mental_illness
+  - action: utter_mental_illness
+  - intent: warning_signs
+  - action: utter_warning_signs
+  - intent: different_mh_professionals
+  - action: utter_different_mh_professionals
+  - intent: get_support
+  - action: utter_get_support
+  - intent: thanks
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Rule based - suicidal thoughts
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+  - action: utter_acknowledge_provided_info
+  - intent: low_sugar_suicidal_thoughts
+  - action: utter_low_sugar_suicidal_thoughts
+  - intent: self_harm
+  - action: utter_self_harm
+  - intent: control_thoughts
+  - action: utter_control_thoughts
+  - intent: try
+  - action: utter_reassurance
+  - intent: thanks
+  - action: utter_did_that_help
+  - or:
+      - intent: affirm
+      - intent: deny
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+    entities:
+      - PERSON
+  - slot_was_set:
+    - PERSON
+  - action: utter_acknowledge_provided_info
+  - intent: mood_excited
+  - action: utter_feeling_excited
+  - intent: mood_happy
+  - action: utter_feeling_happy
+  - intent: thanks
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Lonely
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+    entities:
+    - PERSON
+  - action: utter_acknowledge_provided_info
+  - intent: mood_lonely
+  - action: utter_feeling_lonely
+  - intent: PDA
+  - action: utter_PDA
+  - intent: get_help
+  - action: utter_get_help
+  - intent: thanks
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye

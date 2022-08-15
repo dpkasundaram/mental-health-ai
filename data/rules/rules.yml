@@ -1,0 +1,232 @@
+version: "3.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: respond to depression meaning
+  steps:
+  - intent: depression_meaning
+  - action: utter_depression_meaning
+
+- rule: Say types_of_depression if user ask for it
+  steps:
+  - intent: types_of_depression
+  - action: utter_types_of_depression
+
+- rule: Say depression_cause if user ask for it
+  steps:
+  - intent: depression_cause
+  - action: utter_depression_cause
+
+- rule: Say top_depression_age_group if user ask for it
+  steps:
+  - intent: top_depression_age_group
+  - action: utter_top_depression_age_group
+
+- rule: Say top_depression_country if user ask for it
+  steps:
+  - intent: top_depression_country
+  - action: utter_top_depression_country
+
+- rule: Say low_depression_country if user ask for it
+  steps:
+  - intent: low_depression_country
+  - action: utter_low_depression_country
+
+- rule: Say biological_cause_depression if user ask for it
+  steps:
+  - intent: biological_cause_depression
+  - action: utter_biological_cause_depression
+
+- rule: Say difference_anxiety_and_depression if user ask for it
+  steps:
+  - intent: difference_anxiety_and_depression
+  - action: utter_difference_anxiety_and_depression
+
+- rule: Say depression_trigger if user ask for it
+  steps:
+  - intent: depression_trigger
+  - action: utter_depression_trigger
+
+- rule: Say oversleep_depression if user ask for it
+  steps:
+  - intent: oversleep_depression
+  - action: utter_oversleep_depression
+
+- rule: Say top_race_with_depression if user ask for it
+  steps:
+  - intent: top_race_with_depression
+  - action: utter_top_race_with_depression
+
+- rule: Say lack_of_sleep if user ask for it
+  steps:
+  - intent: lack_of_sleep
+  - action: utter_lack_of_sleep
+
+- rule: Say depression_and_diabetes if user ask for it
+  steps:
+  - intent: depression_and_diabetes
+  - action: utter_depression_and_diabetes
+
+- rule: Say low_sugar_suicidal_thoughts if user ask for it
+  steps:
+  - intent: low_sugar_suicidal_thoughts
+  - action: utter_low_sugar_suicidal_thoughts
+
+- rule: Say anxiety_attack_last if user ask for it
+  steps:
+  - intent: anxiety_attack_last
+  - action: utter_anxiety_attack_last
+
+- rule: Say anxiety_stages if user ask for it
+  steps:
+  - intent: anxiety_stages
+  - action: utter_anxiety_stages
+
+- rule: Say anxiety_age_peak if user ask for it
+  steps:
+  - intent: anxiety_age_peak
+  - action: utter_anxiety_age_peak
+
+- rule: Say anxiety if user ask for it
+  steps:
+  - intent: anxiety_meaning
+  - action: utter_anxiety_meaning
+
+- rule: Say 333_rule if user ask for it
+  steps:
+  - intent: 333_rule
+  - action: utter_333_rule
+- rule: Say thoughts if user ask for it.
+  steps:
+  - intent: thoughts
+  - action: utter_thoughts
+- rule: Say control_thoughts if user ask for it.
+  steps:
+  - intent: control_thoughts
+  - action: utter_control_thoughts
+- rule: Say mental_illness if user ask for it.
+  steps:
+  - intent: mental_illness
+  - action: utter_mental_illness
+- rule: Say affect_mental_illness if user ask for it.
+  steps:
+  - intent: affect_mental_illness
+  - action: utter_affect_mental_illness
+- rule: Say warning_signs if user ask for it.
+  steps:
+  - intent: warning_signs
+  - action: utter_warning_signs
+- rule: Say mental_illness_recovery if user ask for it.
+  steps:
+  - intent: mental_illness_recovery
+  - action: utter_mental_illness_recovery
+- rule: Say symptoms_mental_disorder if user ask for it.
+  steps:
+  - intent: symptoms_mental_disorder
+  - action: utter_symptoms_mental_disorder
+- rule: Say mental_hlth_professional if user ask for it.
+  steps:
+  - intent: mental_hlth_professional
+  - action: utter_mental_hlth_professional
+- rule: Say treatment if user ask for it.
+  steps:
+  - intent: treatment
+  - action: utter_treatment
+- rule: Say different_mh_professionals if user ask for it.
+  steps:
+  - intent: different_mh_professionals
+  - action: utter_different_mh_professionals
+- rule: Say get_help if user ask for it.
+  steps:
+  - intent: get_help
+  - action: utter_get_help
+- rule: Say get_support if user ask for it.
+  steps:
+  - intent: get_support
+  - action: utter_get_support
+- rule: Say get_loc_services if user ask for it.
+  steps:
+  - intent: get_loc_services
+  - action: utter_get_loc_services
+- rule: Say get_clinical_trials if user ask for it.
+  steps:
+  - intent: get_clinical_trials
+  - action: utter_get_clinical_trials
+- rule: Say mental_health if user ask for it.
+  steps:
+  - intent: mental_health
+  - action: utter_mental_health
+- rule: Say prevent_mental_health if user ask for it.
+  steps:
+  - intent: prevent_mental_health
+  - action: utter_prevent_mental_health
+- rule: Say cures_mental_health if user ask for it.
+  steps:
+  - intent: cures_mental_health
+  - action: utter_cures_mental_health
+- rule: Say causes_mental_health if user ask for it.
+  steps:
+  - intent: causes_mental_health
+  - action: utter_causes_mental_health
+- rule: Say difference_psychiatrist_psycologist if user ask for it.
+  steps:
+  - intent: difference_psychiatrist_psycologist
+  - action: utter_difference_psychiatrist_psycologist
+- rule: Say difference_psychotherapy_counselling if user ask for it.
+  steps:
+  - intent: difference_psychotherapy_counselling
+  - action: utter_difference_psychotherapy_counselling
+- rule: Say difference_CBT_DBT if user ask for it.
+  steps:
+  - intent: difference_CBT_DBT
+  - action: utter_difference_CBT_DBT
+- rule: Say difference_anxiety_anxietydisorder if user ask for it.
+  steps:
+  - intent: difference_anxiety_anxietydisorder
+  - action: utter_difference_anxiety_anxietydisorder
+- rule: Say difference_anxiety_stress if user ask for it.
+  steps:
+  - intent: difference_anxiety_stress
+  - action: utter_difference_anxiety_stress
+- rule: Say PDA if user ask for it.
+  steps:
+  - intent: PDA
+  - action: utter_PDA
+- rule: Say cyclothymic_disorder if user ask for it.
+  steps:
+  - intent: cyclothymic_disorder
+  - action: utter_cyclothymic_disorder
+- rule: Say schizoid_personality_disorder if user ask for it.
+  steps:
+  - intent: schizoid_personality_disorder
+  - action: utter_schizoid_personality_disorder
+- rule: Say ASPD if user ask for it.
+  steps:
+  - intent: ASPD
+  - action: utter_ASPD
+- rule: Say OCD if user ask for it.
+  steps:
+  - intent: OCD
+  - action: utter_OCD
+- rule: Say BED if user ask for it.
+  steps:
+  - intent: BED
+  - action: utter_BED
+- rule: Say difference_psychosis_schizophrenia if user ask for it.
+  steps:
+  - intent: difference_psychosis_schizophrenia
+  - action: utter_difference_psychosis_schizophrenia
+- rule: Say prodrome if user ask for it.
+  steps:
+  - intent: prodrome
+  - action: utter_prodrome  

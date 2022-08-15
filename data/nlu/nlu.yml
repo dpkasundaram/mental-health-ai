@@ -1,0 +1,722 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - nice talking to you,bye
+    - nice talking to you
+- intent: supply_user_name_info
+  examples: |
+    - i am [shihar](PERSON)
+    - my name is [asif](PERSON)
+    - i'm [raam](PERSON)
+    - [joy](PERSON) is my name
+    - i am [robin](PERSON)
+    - my name is [robin](PERSON)
+    - i'm [kiran k](PERSON)
+    - [jose](PERSON) is my name
+    - name: [David](PERSON).
+    - [Ram Sathya](PERSON).
+    - Myself [Krishna](PERSON).
+    - Yeah sure. I'm [Barbara](PERSON).
+    - I am [Deepika Sundaram](PERSON).
+    - I am [Paul](PERSON).
+    - I'm [Bin](PERSON).
+    - My name is [John](PERSON).
+    - Ok, I am [Deepika sundaram](PERSON).
+    - Ok, Myself [Adam](PERSON).
+    - i'm [Marg](PERSON)
+    - i'm [ben](PERSON)
+    - i'm [divya](PERSON)
+    - i'm [alice](PERSON)
+    - Hi I am [Deepikaa][{"entity": "PERSON"}, {"entity": "PERSON"}]
+- intent: depression_meaning
+  examples: |
+    - What Is Depression?
+    - Do you know about Depression?
+    - What do you know about Depression?
+- intent: depression_cause
+  examples: |
+    - What are the causes of depression?
+    - What are the top causes of depression?
+    - Is school a cause of depression?
+    - Does Diabetics cause depression?
+    - Does stress cause depression?
+- intent: top_depression_age_group
+  examples: |
+    - Which age group has the highest rate of depression?
+    - What is the age to get depression?
+    - Which age does depression affect?
+    - Which is the top age group to get depression?
+- intent: top_depression_country
+  examples: |
+    - Which country has the highest rate of depression?
+    - Which country has most depressed people?
+    - Which country tops depression?
+    - Which is the country with high depression rate?
+    - What is the country with the highest depression? 
+- intent: affirm
+  examples: |
+    - yes
+    - yep
+    - yeah
+    - indeed
+    - that's right
+    - ok
+    - great
+    - correct
+    - perfect
+    - sounds good
+    - sounds great
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - no way
+    - not true
+    - no thanks
+    - nah
+    - never
+
+- intent: mood_happy
+  examples: |
+    - I am happy
+    - I feel great
+    - I'm fine
+    - I had a great day
+    - Me, wonderful!
+    - I am amazed
+    - You are too cool
+    - I am loving it
+    - I am starting to like this
+    - I am feeling great
+    - Doing fine
+    - Never better
+    - Feeling lucky
+    - All great here
+    - Fantastic day
+    - What a great day
+    - I'm inspired
+    - It's perfect
+    - amazing
+    - I feel wonderful
+    - I am feeling very good
+    - I am great
+    - I'm good
+    - I'm feeling awesome
+    - I'm feeling happy
+    - Today is an awesome day!
+    - I'm so glad
+    - I'm just really happy right now
+- intent: mood_unhappy
+  examples: |
+    - I'm depressed
+    - I feel down
+    - I am sad
+    - I'm sad
+    - iam sad
+    - I don't feel very well
+    - I am disappointed
+    - my day was horrible
+    - This is bad
+    - I am sick
+    - I am ill
+    - I am all low today
+    - Its dissapointing
+    - How irritating it is
+    - Am irritated
+    - I am not feeling well
+    - This sucks!
+    - I am feeling too bad
+    - Worst day ever!
+    - This feels bad
+    - I feel low
+    - Everything is bad today
+    - I feel very sad
+    - Feels horrible
+    - This is depressing
+    - I am depressed
+    - I feel bored
+    - I am feeling bored
+    - life is boring
+    - I am feeling empty
+    - I feel useless
+    - aweful
+    - depressed
+    - heavy
+    - I am feeling quite lost
+    - very sad
+    - unhappy
+    - bad
+    - very bad
+    - awful
+    - terrible
+    - not very good
+    - extremely sad
+    - so sad
+    - Im feeling down
+    - I'm feeling sad
+    - Im feeling sad
+    - Im not okay
+    - Im feeling low
+    - Not good
+    - I'm awful
+    - I'm feeling very sad
+    - I'm uneasy
+    - Actually I'm not fine
+    - I'm not good
+    - I am as lonely as can be
+    - I am going through a rather rough time
+    - I'm grieving
+    - I'm feeling depressed
+    - I want to cry
+    - I need a shoulder to cry
+    - i feel sad
+    - i am depressed
+- intent: mood_angry
+  examples: |
+    - I am angry
+    - I am feeling so angry
+    - I am so annoyed
+    - It's annoying
+    - That's aggravating
+    - I'm furious
+    - That is infuriating
+    - I'm very mad
+    - Everything vexes me
+    - I am outraged
+    - That is outrageous!
+    - I feel hostile
+    - I am very frustrated
+    - It is irritating me
+    - I feel so offended
+    - I am full of fury
+    - I feel very belligerent
+    - I hate doing this
+    - I have no patience today
+    - I could not control my anger
+    - I’m annoyed
+    - I’m super annoyed
+    - I’m so mad.
+    - I'm enraged
+    - I’m straight up angry.
+    - This is maddening!
+    - I'm pissed off
+    - I'm pissed
+    - You bet I'm angry
+    - That made me angry
+    - U made me angry
+    - I'm still angry about that
+- intent: mood_scared
+  examples: |
+    - I am scared
+    - I feel scared
+    - I'm worried
+    - I am terrified
+    - That is frightening
+    - I feel intimidated
+    - That is intimidating
+    - I am petrified
+    - I am afraid
+    - I'm having a bad feeling
+    - I'm fearful
+    - I panicked
+    - I shrank back in fear
+    - I am scared to death
+    - I broke out in a cold sweat
+    - That startled me!
+    - I'm spooked easily
+    - I'm trembling from fear
+    - I'm horrified
+- intent: mood_nervous
+  examples: |
+    - I am nervous
+    - I am stressed out
+    - I feel nervous
+    - I am anxious
+    - I feel anxious
+    - This is nerveracking
+    - This is nervewracking
+    - This is nerve racking
+    - This is nerve wracking
+    - I feel like I am going to throw up
+    - I have a lump in my throat
+    - I have butterflies in my stomach
+    - I am a bundle of nerves
+    - I am breaking out in a cold sweat
+    - I am afraid of my own shadow
+    - I am like a cat on hot bricks
+    - I am jumping out of my skin
+    - I am at my wits' end
+    - I am tongue tied
+    - I am on edge
+    - I am very tense
+    - I feel uneasy
+    - I am alarmed
+    - I am troubled
+    - I'm tensed
+    - I'm stressed
+    - I am feeling stressed lately
+    - I'm under a lot of stress
+    - I'm constantly worried
+    - I feel constant tension
+    - I’m anxious.
+    - I’m suffering from anxiety.
+    - I’ve been feeling rather anxious lately.
+    - My anxiety is rather through the roof these days.
+    - I’m feeling rather restless
+    - I cannot concentrate as I'm worried constantly
+    - I'm under immense stress
+    - It's been a rough couple of days. VERY stressful
+    - I'm quite tensed.
+    - There's been quite a few changes in my life. I don't think I am handling them well. It's quite stressful.
+    - I find myself worrying about every little detail
+    - I am a chronic worrier.
+    - I’m feeling rather restless and a horde of worries is bothering me
+    - I cannot concentrate due to the whole number of worries that are bothering me
+- intent: mood_bored
+  examples: |
+    - soo bored
+    - that was boring
+    - I'm bored
+    - bored
+    - boring
+    - I am getting bored
+    - Staying at home is boring
+    - very boring
+    - it bores me
+    - i had a slow day
+    - i am very bored
+    - Im kinda bored today
+    - I've never been more bored
+    - I was bored
+    - It's boring
+    - This is boring
+    - We're all bored
+    - It's very boring
+    - I'm already bored
+    - I'm bored out of my mind
+- intent: mood_excited
+  examples: |
+    - I am excited
+    - I'm really excited
+    - I can't begin to say how excited I am
+    - I'm thrilled
+    - I'm damn excited
+    - I'm hyped
+    - I'm very excited
+    - I felt excited
+    - It was exciting
+    - That was exciting
+    - How exciting!
+    - This is so fun
+- intent: mood_lonely
+  examples: |
+    - I am lonely
+    - I'm very lonely
+    - I'm so lonely
+    - I'm really lonely
+    - I am feeling lonely
+    - I feel lonely
+    - I am a loner
+    - I don't have any company
+    - I don't have anyone else
+    - I'm always alone
+    - I'm alone
+    - am all alone
+    - I live alone
+    - I'm all alone
+    - I've gotten used to living alone
+    - I think I've been living alone too long
+    - I have no one to talk to
+    - I am still alone
+    - I am used to living alone
+    - i feel lonely
+- intent: mood_tired
+  examples: |
+    - I'm drained
+    - I've overworked
+    - I am tired
+    - I'm exhausted
+    - I grow weary
+    - I'm worn out
+    - I'm getting tired
+    - I feel tired
+    - I'm so tired
+    - I'm completely drained out
+    - I'm very tired
+    - i was tired
+    - i feel tired
+    - i'm dead tired
+    - I'm a bit tires
+    - I was very tired
+    - I am really tired
+    - i am awfully tired
+    - i am kind of so tired
+    - I am little tired
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you a robot?
+    - am I talking to an actual person?
+    - you're a bot aren't you?
+    - are you even a real person?
+
+- intent: biological_cause_depression
+  examples: |
+    - What is the biological cause of depression?
+    - Which is the biological cause of depresssion?
+    - What are the biological causes of depression?
+
+- intent: difference_anxiety_and_depression
+  examples: |
+    - What is the meaning of anxiety and depression?
+    - What is the difference between anxiety and depression?
+    - What are the differences between anxiety and depression?
+    - What is anxiety and depression?
+
+- intent: depression_trigger
+  examples: |
+    - How does depression affect the world?
+    - What is triggering depression?
+    - How does depression gets triggered?
+    - How depression affects the world?
+
+- intent: oversleep_depression
+  examples: |
+    - Does oversleeping cause depression?
+    - Does sleeping cause depression?
+    - Is oversleeping a cause of depression?
+    - How oversleeping afects depression?
+- intent: top_race_with_depression
+  examples: |
+    - Which race has the highest rate of depression?
+    - Which race has high depressed people?
+    - Which race is high in depression?
+    - Which is the race with high depression rate?
+    - What is the race with the high depression?
+
+- intent: lack_of_sleep
+  examples: |
+    - Can lack of sleep make you feel sad?
+    - Can sleep cause sadness?
+    - Can less sleeping make you feel sad?
+    - Does sleep cause depression?
+    - Can lack of sleep cause depression?
+- intent: depression_and_diabetes
+  examples: |
+    - Is depression a side effect of diabetes?
+    - Does diabetes cause depression?
+    - Are diabetes and depression connected?
+- intent: low_sugar_suicidal_thoughts
+  examples: |
+    - Can low blood sugar cause suicidal thoughts?
+    - Does low blood sugar cause depression?
+    - Does low blood sugar cause suicidal thoughts?
+    - Are low blood sugar and depression connected?
+- intent: anxiety_meaning
+  examples: |
+    - What is anxiety ?
+    - What do you mean by anxiety ?
+    - What does anxiety mean ?
+- intent: anxiety_attack_last
+  examples: |
+    - How long can Anxiety last?
+    - How long does anxiety attck last?
+    - How long will be the anxiety episode?
+    - How long one can have anxiety attack?
+- intent: anxiety_stages
+  examples: |
+    - What are the stages of anxiety?
+    - What are anxiety stages?
+    - What are the levels of anxiety?
+- intent: anxiety_age_peak
+  examples: |
+    - At what age does anxiety peak?
+    - What age people get anxiety ?
+    - What age does anxiety peak?
+- intent: anxiety_cause
+  examples: |
+    - Why is anxiety bad for you?
+    - Why is anxiety bad?
+    - How does anxiety affect?
+
+- intent: 333_rule
+  examples: |
+    - What is the 3 3 3 rule for anxiety?
+    - How can we reduce anxiety?
+    - What are the tips to reduce anxiety?
+    - What can i do for anxiety?
+    - What can i do to reduce anxiety?
+    - How to deal with anxiety?
+    - How to deal with panic attack?
+  
+- intent: self_harm
+  examples: |
+    - I want to die
+    - I don't want to live anymore
+    - I'm getting sucidal thoughts, what to do ?
+    - I have thoughts of suicide, or someone I care about is talking about suicide. What should I do?
+    - i see no changes wake up in the morning and i ask myself is life worth living should i blast myself
+    - emotional trauma/neglect and being re-traumatized on top of the depression. I can't take it anymore I just want out.
+    - Wish my parents would die so I could commit suicide. I don't want to be alive.
+    - I don't want to be alive
+    - I can't go more than 5 minutes without thinking about suicide.
+    - I want to kill myself
+    - I wish i don't want to wake up
+    - I just feel so lonely and want to die.
+    - I don't want to be here anymore. Currently debating whether or not to end it. Im so lonely and lost.
+    - i don't want to live anymore. i cannot handle this
+    - i don't want to live anymore
+- intent: self_doubt
+  examples: |
+    - I am good for nothing
+    - i am afraid i will fail again
+    - I let everyone down
+    - I wish to quit
+    - No one likes me!
+    - I think I am ugly!
+    - I wish I was better than them
+    - I'm done saying I love you to her because I don't want to hear a lie back to me. I feel so ugly and unwanted and unloved
+    - Always feel like I'm being criticized and mocked even when alone.... Does anyone else experience this?
+    - What's the point sometimes?. I try and fail. I try again and fail again.
+    - I'll never be anyone's priority.... even though they are mine. :(
+    - No one cares for me. I hate myself more than anyone I've ever met.
+    - i'm a failure
+    - i'm a looser
+    - i hate myself
+    - I feel that I belong in this world I feel that my existence is a mistake.
+    - i am good for nothing
+- intent: thoughts
+  examples: |
+    - "How many thoughts a day do we have?"
+    - What is the maximum thoughts one can have?
+    - I have too many thoughts a day
+    - How to deal with multiple thoughts?
+- intent: control_thoughts
+  examples: |
+    - "Do we control our thoughts?"
+    - How to control thoughts?
+    - How to deal with negative thoughts
+    - I need help in dealing with negative thoughts
+    - I cannot control negative thoughts
+- intent: mental_illness
+  examples: |
+    - "What does it mean to have a mental illness?"
+    - What is mental illness?
+    - How to deal with mental illness?
+    - how does it mean to have mental illness?
+- intent: affect_mental_illness
+  examples: |
+    - "Who does mental illness affect?"
+    - Does mental illness affect everyone?
+- intent: warning_signs
+  examples: |
+    - "What are some of the warning signs of mental illness?"
+    - What are the warnings for mental illness?
+    - Mention some warning signs for mental illness
+    - How do i know i have mental illness?
+- intent: mental_illness_recovery
+  examples: |
+    - "Can people with mental illness recover?"
+    - can mental illness people recover?
+    - Is there a recovery for mental illness?
+    - Can mental illness people recover?
+- intent: symptoms_mental_disorder
+  examples: |
+    - "What should I do if I know someone who appears to have the symptoms of a mental disorder?"
+    - What do i do if i have any symptoms?
+    - What can i do if i have symptoms of mental disorder?
+    - What can i do next if i have symptoms of mental disorder?
+    - What should i do if i have mental disorder?
+    - Whom should i seek help if i have mental disorder?
+- intent: mental_hlth_professional
+  examples: |
+    - "How can I find a mental health professional for myself or my child?"
+    - How can i find help for my child?
+    - Whom should i seek help for my child if my child have mental disorder?
+    - My child have mental illness. Whom should i seek help?
+- intent: treatment
+  examples: |
+    - "What treatment options are available?"
+    - What are the treatment for mental illness?
+    - What are the tratment options for mental disorder?
+    - What is the treatment for mental illness?
+    - What are the types of treatment?
+- intent: different_mh_professionals
+  examples: |
+    - "What are the different types of mental health professionals?"
+    - What are the types of mental health professionals?
+    - What are types of mental health providers?
+- intent: get_help
+  examples: |
+    - "Where else can I get help?"
+    - How do i get help?
+    - Whom should i seek for help?
+- intent: get_support
+  examples: |
+    - "Where can I go to find a support group?"
+    - How do i find support group?
+    - Whom should i contact for support group?
+- intent: get_loc_services
+  examples: |
+    - "Where can I go to find other local services?"
+    - How do i find local services?
+    - Whom should i contact for local services?
+- intent: get_clinical_trials
+  examples: |
+    - "Where can I learn more information about clinical trials?"
+    - How do i know about clinical trials?
+- intent: mental_health
+  examples: |
+    - "What is mental health?
+    - What is mental health?
+    - How to deal with mental health?
+    - how does it mean to have good mental health?
+    - Is mental health important?
+- intent: prevent_mental_health
+  examples: |
+    - "Can you prevent mental health problems?"
+    - How to prevent mental health problems?
+    - How to deal with mental health problems?
+- intent: cures_mental_health
+  examples: |
+    - "Are there cures for mental health problems?"
+    - What are the cures for mental health problems?
+    - Is mental health problem curable?
+    - Is mental health problem can be cured?
+- intent: causes_mental_health
+  examples: |
+    - "What causes mental health problems?"
+    - What are the causes of mental health problems?
+- intent: difference_psychiatrist_psycologist
+  examples: |
+    - "What's the difference between a psychiatrist and a registered psychologist?"
+    - what is the difference between a psychiatrist and a registered psychologist?
+    - Tell me the difference between a psychiatrist and a registered psychologist?
+    - Who is a psychiatrist?
+    - Who is a psychologist?
+- intent: difference_psychotherapy_counselling
+  examples: |
+    - "What's the difference between psychotherapy and counselling?"
+    - what is the difference between psychotherapy and counselling?
+    - Tell me the difference between psychotherapy and counselling?
+    - What is a psychotherapy?
+    - Who is counselling?
+- intent: difference_CBT_DBT
+  examples: |
+    - "What's the difference between CBT and DBT?"
+    - What is CBT?
+    - What is DBT?
+    - Tell me Difference between CBT and DBT
+    - What is the difference between CBT and DBT?
+- intent: difference_anxiety_anxietydisorder
+  examples: |
+    - "What's the difference between anxiety and an anxiety disorder?"
+    - What is anxiety disorder?
+    - Tell me Difference between anxiety and anxiety disorder
+    - What is the difference between anxiety and anxiety disorder?
+- intent: difference_anxiety_stress
+  examples: |
+    - "What's the difference between anxiety and stress?"
+    - What is stress?
+    - Tell me Difference between anxiety and stress
+    - What is the difference between anxiety and stress?
+- intent: PDA
+  examples: |
+    - "What is dysthymia or persistent depressive disorder?"
+    - What is PDA?
+    - What is dysthymia?
+    - What is persistent depressive disorder?
+    - What do you know about PDA?
+- intent: cyclothymic_disorder
+  examples: |
+    - "What is cyclothymic disorder?"
+    - What do you know about cyclothymic disorder?
+- intent: schizoid_personality_disorder
+  examples: |
+    - "What is schizoid personality disorder?"
+    - What is ScPD?
+    - What do you know about schizoid personality disorder?
+    - What do you know about ScPD?
+- intent: ASPD
+  examples: |
+    - "What is antisocial personality disorder?"
+    - What is ASPD?
+    - What do you know about antisocial personality disorder?
+    - What do you know about ASPD?
+- intent: OCD
+  examples: |
+    - "What is obsessive-compulsive personality disorder?"
+    - What is OCD?
+    - What do you know about obsessive-compulsive personality disorder?
+    - What do you know about OCD?
+- intent: BED
+  examples: |
+    - "What is binge-eating disorder?"
+    - What is BED?
+    - What do you know about binge-eating disorder?
+    - What do you know about BED?
+- intent: difference_psychosis_schizophrenia
+  examples: |
+    - "What's the difference between psychosis and schizophrenia?"
+    - What is psychosis?
+    - What is schizophrenia?
+    - Tell me Difference between psychosis and schizophrenia
+    - What is the difference between psychosis and schizophrenia?
+- intent: prodrome
+  examples: |
+    - What is a prodrome?
+    - What do you know about prodrome?
+- intent: try_tip
+  examples: |
+    - Do yo have any tips ?
+    - Can you recommend anything ?
+    - any tips
+- intent: thanks
+  examples: |
+    - Thanks.
+    - Thank you, that helps
+    - Sure, thanks
+    - Thank you
+    - thanks
+    - hehe thanks
+    - thanks it helps
+    - sure thanks
+- intent: try
+  examples: |
+    - I will try
+    - I will consider
+    - I will think about it
+    - I will try my best
+    - i will try
+    - let me try

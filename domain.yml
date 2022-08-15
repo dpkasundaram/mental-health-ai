@@ -1,32 +1,267 @@
 version: "3.0"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 
 intents:
-  - greet
-  - supply_user_name_info:
-      use_entities: []
+- 333_rule
+- ASPD
+- BED
+- OCD
+- affect_mental_illness
+- anxiety_cause
+- anxiety_attack_last
+- anxiety_stages
+- anxiety_age_peak
+- anxiety_meaning
+- bot_challenge
+- biological_cause_depression
+- control_thoughts
+- cyclothymic_disorder
+- cures_mental_health
+- causes_mental_health
+- greet
+- goodbye
+- get_clinical_trials
+- get_help
+- get_support
+- get_loc_services
+- supply_user_name_info:
+    use_entities: []
+- difference_anxiety_and_depression
+- difference_psychiatrist_psycologist
+- difference_psychotherapy_counselling
+- difference_psychosis_schizophrenia
+- difference_CBT_DBT
+- difference_anxiety_anxietydisorder
+- difference_anxiety_stress
+- PDA
+- different_mh_professionals  
+- depression_cause
+- depression_meaning
+- depression_trigger
+- depression_and_diabetes
+- low_depression_country
+- low_sugar_suicidal_thoughts
+- lack_of_sleep
+- prevent_mental_health
+- prodrome
+- schizoid_personality_disorder
+- self_harm
+- self_doubt
+- symptoms_mental_disorder
+- treatment
+- thoughts
+- top_depression_age_group
+- top_depression_country
+- top_race_with_depression
+- types_of_depression
+- try
+- try_tip
+- thanks
+- affirm
+- deny
+- mood_angry
+- mood_bored
+- mood_depressed
+- mood_excited
+- mood_happy
+- mood_lonely
+- mood_nervous
+- mood_scared
+- mood_tired
+- mood_unhappy
+- mental_health
+- mental_illness
+- mental_illness_recovery
+- mental_hlth_professional
+- oversleep_depression
+- warning_signs
 
 entities:
-  - PERSON
-
+- PERSON
 slots:
   PERSON:
     type: any
-    influence_conversation: False
+    influence_conversation: false
     mappings:
     - entity: PERSON
       type: from_entity
     - type: from_entity
       entity: PERSON
-
 responses:
+  utter_goodbye:
+  - text: Goodbye
   utter_greet:
   - text: Hello! I am Aura your AI therapist :-) Nice to meet you!
+  - text: Hey! {PERSON} How are you?
+  utter_iamabot:
+  - text: Hello! I am Aura your AI therapist :-) Nice to meet you!
+  - text: I am Aura your AI therapist
   utter_ask_for_user_name_info:
   - text: Hello! May I know whom i am talking with ?
   utter_acknowledge_provided_info:
   - text: Hello {PERSON},How can i help you?
-
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_depression_meaning:
+  - text: Depression is a common and serious medical illness that negatively affects how you feel, the way you think and how you act. Fortunately,it is also treatable. Depression causes feelings of sadness and/or a loss of interest in activities you once enjoyed. It can lead to a variety of emotional and physical problems and can decrease your ability to function at work and at home.
+  - text: Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems
+  utter_types_of_depression:
+  - text: There are many different forms of depression but most common types are. Clinical depression,persistent depressive disorder,bipolar disorder,postnatal disorder.
+  utter_depression_cause:
+  - text: It's complicated, and there are multiple causes of major depression. Factors such as genetic vulnerability, severe life stressors, substances you may take (some medications, drugs and alcohol) and medical conditions can affect the way your brain regulates your moods.
+  - text: Abuse. Past physical, sexual, or emotional abuse can increase the vulnerability to clinical depression later in life.
+  - text: There is no single cause for depression; rather it's a combination of stress and a person's vulnerability to developing depression. The predisposition to developing depression can be inherited. Other biological causes for depression can include physical illness, the process of ageing and gender.
+  utter_top_depression_age_group:
+  - text: This number represented 7.1% of all U.S. adults. The prevalence of major depressive episode was higher among adult females (8.7%) compared to males (5.3%). The prevalence of adults with a major depressive episode was highest among individuals aged 18-25 (13.1%).
+  utter_top_depression_country:
+  - text: The most depressed country is Afghanistan, where more than one in five people suffer from the disorder.
+  utter_low_depression_country:
+  - text: The least depressed is Japan, with a diagnosed rate of less than 2.5 percent.
+  utter_top_race_with_depression:
+  - text: Major depression was most prevalent among Hispanics (10.8%), followed by African Americans (8.9%) and Whites (7.8%). The odds of depressive disorders among older Hispanics were 44% greater than among Whites (OR = 1.44; 95% CI = 1.02, 2.04), representing a significantly greater prevalence of major depression.
+  utter_biological_cause_depression:
+  - text: There is no single cause for depression; rather it's a combination of stress and a person's vulnerability to developing depression. The predisposition to developing depression can be inherited. Other biological causes for depression can include physical illness, the process of ageing and gender.
+  utter_difference_anxiety_and_depression:
+  - text: Depression and anxiety disorders are different, but people with depression often experience symptoms similar to those of an anxiety disorder, such as nervousness, irritability, and problems sleeping and concentrating. But each disorder has its own causes and its own emotional and behavioral symptoms.
+  utter_depression_trigger:
+  - text: Depression is a leading cause of disability worldwide and is a major contributor to the overall global burden of disease. More women are affected by depression than men. Depression can lead to suicide. There are effective psychological and pharmacological treatments for moderate and severe depression.
+  utter_oversleep_depression:
+  - text: It's important to remember that oversleeping is a possible symptom of depression and that oversleeping doesn't cause depression. But it can exacerbate and worsen depression symptoms
+  utter_lack_of_sleep:
+  - text: Studies show people who are sleep deprived report increases in negative moods (anger, frustration, irritability, sadness) and decreases in positive moods. And sleeplessness is often a symptom of mood disorders, such as depression and anxiety.
+  utter_depression_and_diabetes:
+  - text: If you have diabetes  either type 1 or type 2  you have an increased risk of developing depression. And if you're depressed, you may have a greater chance of developing type 2 diabetes. The good news is that diabetes and depression can be treated together.
+  utter_low_sugar_suicidal_thoughts:
+  - text: The observed association between plasma glucose levels, insulin resistance and suicidal behaviour suggests that disturbances in glucose metabolism are associated with suicidal ideation and attempts.
+  utter_anxiety_meaning:
+  - text: A feeling of worry, nervousness, or unease, typically about an imminent event or something with an uncertain outcome
+  - text: Anxiety is a feeling of fear, dread, and uneasiness. It might cause you to sweat, feel restless and tense, and have a rapid heartbeat. It can be a normal reaction to stress.
+  utter_anxiety_attack_last:
+  - text: Anxiety attacks usually peak within 10 minutes, and they rarely last more than 30 minutes. But during that short time, you may experience terror so severe that you feel as if you're about to die or totally lose control.
+  utter_anxiety_stages:
+  - text: Anxiety levels are typically classified by the level of distress and impairment experienced into four categories namely, mild anxiety, moderate anxiety, severe anxiety and panic level anxiety.
+  utter_anxiety_age_peak:
+  - text: Adults ages 30 to 44 have the highest rate of anxiety of this age group, with around 23% of people this age reporting an anxiety disorder within the past year.
+  utter_anxiety_cause:
+  - text: Anxiety disorders can cause rapid heart rate, palpitations, and chest pain. You may also be at an increased risk of high blood pressure and heart disease. If you already have heart disease, anxiety disorders may raise the risk of coronary events.
+  utter_333_rule:
+  - text: There's an anxiety-reducing technique called grounding. There are different versions of this, but an easy one to remember is the 3-3-3 rule. Mentally note three things you see, three sounds you hear, and then move three parts of your body. This exercise can help your mind refocus on something else.
+  - text: 3 3 3 rule is the best method to reduce anxiety. In this method you have to mentally note three things you see, three sounds you hear, and then move three parts of your body. This exercise can help your mind refocus on something else.
+  utter_thoughts:
+  - text: A new study has suggested that an average person has 6,200 thoughts per day. Thousands of thoughts cross our mind through the day. Many people even complain that they can't sleep immediately after going to bed as their brain does not stop thinking.
+  utter_control_thoughts:
+  - text: We are aware of a tiny fraction of the thinking that goes on in our minds, and we can control only a tiny part of our conscious thoughts. The vast majority of our thinking efforts go on subconsciously. Slips of the tongue and accidental actions offer glimpses of our unfiltered subconscious mental life.
+  utter_mental_illness:
+  - text: Mental illnesses are health conditions that disrupt a person's thoughts, emotions, relationships, and daily functioning.
+  utter_affect_mental_illness:
+  - text: Mental illness can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background.
+  utter_warning_signs:
+  - text: Symptoms of mental health disorders vary depending on the type and severity of the condition.
+  utter_mental_illness_recovery:
+  - text: When healing from mental illness, early identification and treatment are of vital importance.
+  utter_symptoms_mental_disorder:
+  - text: We encourage those with symptoms to talk to their friends and family members and seek the counsel of a mental health professional.
+  utter_mental_hlth_professional:
+  - text: Feeling comfortable with the professional you or your child is working with is critical to the success of the treatment.
+  utter_treatment:
+  - text: Different treatment options are available for individuals with mental illness which includes psychotherapy, counselling and medication. Your primary care physician or mental health professional will be able to find the right treatment for you.
+  utter_different_mh_professionals:
+  - text: There are many types of mental health professionals. The variety of providers and their services may be confusing. Each have various levels of education, training, and may have different areas of expertise. Finding the professional who best fits your needs may require some research.
+  utter_get_help:
+  - text: Talking about your mental health with someone might help you, but most importantly contacting a therapist or psychiatrist will make a huge difference. If you're feeling suicidal and need help right now, call the National Suicide Prevention Lifeline in the U.S. at 1-800-273-8255.
+  utter_get_support:
+  - text: Your primary care physician or mental health professional is often the best place to start when looking for a local support group. You can also search for a local meeting via the websites of the various support groups.
+  utter_get_loc_services:
+  - text: Visit the National Council's Find a Provider website for help accessing local treatment and service providers.
+  utter_get_clinical_trials:
+  - text: Sometimes, consumers of mental health services may consider participating in a research study when they have not experienced improvement despite having tried a variety of medications and treatments. Research studies (also known as clinical trials) may involve the use of new medications or new treatment approaches whose safety and effectiveness is being tested. While we support innovation in the field, consumers should be cautioned that there are risks associated with clinical trials €“ make sure youre aware of them before you enroll.
+  utter_mental_health:
+  - text: We all have mental health which is made up of our beliefs, thoughts, feelings and behaviours.
+  utter_prevent_mental_health:
+  - text: We can all suffer from mental health challenges, but developing our wellbeing, resilience, and seeking help early can help prevent challenges becoming serious.
+  utter_cures_mental_health:
+  - text: It is often more realistic and helpful to find out what helps with the issues you face. Talking, counselling, medication, friendships, exercise, good sleep and nutrition, and meaningful occupation can all help.
+  utter_causes_mental_health:
+  - text: Challenges or problems with your mental health can arise from psychological, biological, and social, issues, as well as life events.
+  utter_difference_psychiatrist_psycologist:
+  - text: A psychiatrist is a medical doctor with extra training in mental health who can choose to prescribe medications. Some use psychotherapy approaches like cognitive-behavioral therapy to treat mental health problems.A registered psychologist focuses on different talk therapy counseling approaches to treatments but they don't prescribe medication. They have graduate degrees in psychology.
+  utter_difference_psychotherapy_counselling:
+  - text: Both are used to describe professionals who use talk-based approaches to help someone recover from a mental illness or mental health problem. Many different professionals may provide counseling or psychotherapy, including registered psychologists, and registered clinical counselors.
+  utter_difference_CBT_DBT:
+  - text: In both CBT and DBT you work with a mental health professional to learn more about the challenges you experience and learn skills to help you manage challenges on your own. Cognitive-behavioral therapy or CBT teaches you how your thoughts feelings and behaviors influence each other. CBT teaches you how to have a positive change in one factor (changing a thought or behavior) can lead to positive changes in all factors.Dialectical behavior therapy or DBT is based on CBT with a greater focus on emotional and social aspects. DBT was developed to help people cope with extreme or unstable emotions and harmful behaviors. DBT is an evidence-based approach to help people regulate emotions. It started as a treatment for borderline personality disorderand current research shows it may help with many different mental illnesses or concerns particularly self-harm.
+  utter_difference_anxiety_anxietydisorder:
+  - text: Anxiety is a problem when it becomes overwhelming or unmanageable and it comes up unexpectedly. Anxiety disorders are mental illnesses that have a big impact on your life.
+  utter_difference_anxiety_stress:
+  - text: Stress focuses on mainly external pressures on us that we are finding hard to cope with. The symptoms of stress typically disappear after the stressful situation is over. on the other hand focuses on worries or fears about things that could threaten us as  well as anxiety about the anxiety itself. They can be problems if they last for a long time or have an impact on our well-being or daily life.
+  utter_PDA:
+  - text: Dysthymia now called persistent depressive disorder or PDD is  a mood disorder. Tallk to a doctor or mental health professional if you think you might have a pdd disorder.
+  utter_cyclothymic_disorder:
+  - text: Cyclothymic disorder is a subtype of bipolar disorder. Much like bipolar disorder. Like bipolar disorder people may experience wellness between episodes of hypomania and depression. Talk to a doctor or mental health professional if you think you might have a cyclothymic disorder.
+  utter_schizoid_personality_disorder:
+  - text: ' Schizoid personality disorder or SPD affects social interactions and relationships. People with SPD may have a hard time relating to others and showing emotions. They may avoid close relationships and prefer to spend their time alone, seeming distant even to close family members.'
+  utter_ASPD:
+  - text: Antisocial personality disorder or ASPD affects the way people think about the rights of others. Someone with ASPD may disregard laws or expectations, lack remorse when they hurt others or break the law, make reckless decisions, and believe they are superior to others. People may see someone with ASPD as overly dramatic, impulsive, manipulative, and deceitful
+  utter_OCD:
+  - text: 'People with Obsessive-compulsive personality disorder or OCPD have very inflexible thinking and expect everything to be ordered, and perfect. The conflict between the desire for neatness or order and the inability to throw things out may cause a lot of anxiety. '
+  utter_BED:
+  - text: Binge-eating disorder or BED is a type of eating disorder. It involves episodes of eating a lot of food in a short amount of time, past the point of feeling full, and feelings of being out of control or unable to stop eating. People who experience binge-eating disorder may binge even when they don't feel hungry
+  utter_difference_psychosis_schizophrenia:
+  - text: Psychosis involves episodes of having a break from reality. Major symptoms of psychosis are hallucinations and delusions.  Psychosis can even affect the way people move or express their emotions.Schizophrenia is a mental illness that causes psychosis but schizophrenia also has other symptoms.
+  utter_prodrome:
+  - text: Prodrome is a medical term for early signs or symptoms of an illness or health problem that appear before the major signs or symptoms start.
+  utter_supportive_answer_regarding_school:
+  - text: You are young and still have time to make something of yourself. The first step to feel better is to tell someone you trust. It can be a parent, mentor or school counselor.
+  utter_feeling_depressed:
+  - text: Depression can be hard however there are small steps you can take to improve your sense of well being. Take one day at a time, Practice self-compassion, stick to a routine, do something that you enjoy and talk to a mental health professional.
+  - text: It is essential to accept your feelings and understand why you are feeling them. The more you try to fight, push away, the worse you will feel in the long term. Instead, allow yourself to be aware of the emotions you are currently experiencing. Feel them, accept them, and have faith they will pass quickly.
+  utter_feeling_sad:
+  - text: Let me give you a virtual hug, don't be sad. Go out for a walk, Get connected with nature and Practice meditation.
+  utter_feeling_angry:
+  - text: Not every problem is worth stressing over. Sometimes letting go can make you feel better. You get to choose what has an effect on you. Practice mindfullness if you are struggling with anger issues.
+  utter_feeling_nervous:
+  - text: R.A.S.P. Remember to breathe, Accept and allow your feelings, Shift focus, Prevent feedback of fear.
+  utter_feeling_scared:
+  - text: Trauma and other life experiences can also contribute to a sense of feeling scared. Remind yourself that you are not in danger, Pen down your thoughts and Physical excercise.
+  utter_feeling_bored:
+  - text: Look for some simple diversions and way out of it. Take up a new hobby, read your favourite book, connect with your friends and journal your thoughts.
+  utter_feeling_lonely:
+  - text: I'm sorry to hear that you feel all alone. If it makes you feel better most of us feel that way at some point. Your desires, fears, and sorrows are universal. So is your loneliness. We all feel lost sometimes. I know how strong you are and I know you will overcome this.
+  utter_feeling_excited:
+  - text: Practice balancing your emotions. A sudden high in hormones can make you pretty anxious. If you feel breathless,  inhale fresh air, and expose yourself to sunlight. This will help you calm down.
+  utter_feeling_happy:
+  - text: I'm glad you are happy today. You deserve happiness. Write down three things that madfe you happy today. Even this small act of gratitude will boost your positivity. 
+  utter_self_harm:
+  - text: You are beautiful and worth more than you think. I'm pretty sure you have handled things worse than this. A healthcare provider can also help you work through your symptoms by giving you information and coping methods. If you're feeling suicidal and need help right now, call the National Suicide Prevention Lifeline in the U.S. at 1-800-273-8255.
+  - text: You may be afraid that you will get overwhelmed or be stuck with the pain. But the truth is that emotions quickly come and go if you let them. It's only when you obsess over the feeling that it persists. If you're feeling suicidal and need help right now, call the National Suicide Prevention Lifeline in the U.S. at 1-800-273-8255.
+  utter_reassurance:
+  - text: I can crack you a joke if you want.
+  - text: Here is something to cheer you up
+    custom : 
+      video: https://i.imgur.com/HcyqZ3k.mp4
+  - text: Here is something to make you smile
+    image: https://i.imgur.com/nGF1K8f.jpg
+  - text: Check this out, to make you smile
+    custom : 
+      video: https://i.imgur.com/g0rKCLa.mp4
+  utter_self_doubt:
+  - text: Be kind to yourself. It may be challenging, but focus on treating yourself with kindness.
+  - text: When you notice negative self-talk, look for ways that you can reframe those thoughts in a more positive or realistic way. Instead of thinking "I'll never be able to do it," for example, you might say, "I can do small things each day to improve."
+  utter_default:
+  - text: Sorry I don't understand, can you rephase your question?
+actions:
+- utter_acknowledge_provided_info
+- utter_ask_for_user_name_info
+- utter_did_that_help
+- utter_feeling_angry
+- utter_feeling_bored
+- utter_feeling_depressed
+- utter_feeling_lonely
+- utter_feeling_nervous
+- utter_feeling_sad
+- utter_feeling_scared
+- utter_goodbye
+- utter_happy
+- utter_greet
+- utter_reassurance
+- utter_self_doubt
+- utter_self_harm
