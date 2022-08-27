@@ -230,3 +230,7 @@ rules:
   steps:
   - intent: prodrome
   - action: utter_prodrome  
+- rule: Ask the user to rephrase in case of low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

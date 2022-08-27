@@ -1,10 +1,28 @@
-version: "3.0"
+version: '3.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
 intents:
 - 333_rule
+- goodbye
+- try
+- thanks
+- intro
+- self_doubt
+- affirm
+- lack_of_sleep
+- supply_user_name_info:
+    use_entities: []
+- what_can_you_do
+- try_tip
+- bot_challenge
+- greet
+- difference_psychotherapy_counselling
+- top_depression_age_group
+- depression_cause
+- depression_meaning
+- low_sugar_suicidal_thoughts
+- treatment
 - ASPD
 - BED
 - OCD
@@ -14,70 +32,51 @@ intents:
 - anxiety_stages
 - anxiety_age_peak
 - anxiety_meaning
-- bot_challenge
 - biological_cause_depression
 - control_thoughts
 - cyclothymic_disorder
 - cures_mental_health
 - causes_mental_health
-- greet
-- goodbye
 - get_clinical_trials
 - get_help
 - get_support
 - get_loc_services
-- supply_user_name_info:
-    use_entities: []
 - difference_anxiety_and_depression
 - difference_psychiatrist_psycologist
-- difference_psychotherapy_counselling
 - difference_psychosis_schizophrenia
 - difference_CBT_DBT
 - difference_anxiety_anxietydisorder
 - difference_anxiety_stress
 - PDA
-- different_mh_professionals  
-- depression_cause
-- depression_meaning
+- different_mh_professionals
 - depression_trigger
 - depression_and_diabetes
 - low_depression_country
-- low_sugar_suicidal_thoughts
-- lack_of_sleep
 - prevent_mental_health
 - prodrome
 - schizoid_personality_disorder
 - self_harm
-- self_doubt
 - symptoms_mental_disorder
-- treatment
 - thoughts
-- top_depression_age_group
 - top_depression_country
 - top_race_with_depression
 - types_of_depression
-- try
-- try_tip
-- thanks
-- affirm
 - deny
 - mood_angry
 - mood_bored
-- mood_depressed
+- mood_unhappy
+- mood_lonely
 - mood_excited
 - mood_happy
-- mood_lonely
 - mood_nervous
 - mood_scared
 - mood_tired
-- mood_unhappy
 - mental_health
 - mental_illness
 - mental_illness_recovery
 - mental_hlth_professional
 - oversleep_depression
 - warning_signs
-
 entities:
 - PERSON
 slots:
@@ -92,12 +91,15 @@ slots:
 responses:
   utter_goodbye:
   - text: Goodbye
-  utter_greet:
+  utter_intro:
   - text: Hello! I am Aura your AI therapist :-) Nice to meet you!
+  utter_greet:
   - text: Hey! {PERSON} How are you?
   utter_iamabot:
   - text: Hello! I am Aura your AI therapist :-) Nice to meet you!
   - text: I am Aura your AI therapist
+  utter_what_can_you_do:
+  - text: I'm here to listen to you and provide you conversation therapy to help you to reframe your thoughts. I can help you to deal with your problems.
   utter_ask_for_user_name_info:
   - text: Hello! May I know whom i am talking with ?
   utter_acknowledge_provided_info:
@@ -229,29 +231,36 @@ responses:
   utter_feeling_excited:
   - text: Practice balancing your emotions. A sudden high in hormones can make you pretty anxious. If you feel breathless,  inhale fresh air, and expose yourself to sunlight. This will help you calm down.
   utter_feeling_happy:
-  - text: I'm glad you are happy today. You deserve happiness. Write down three things that madfe you happy today. Even this small act of gratitude will boost your positivity. 
+  - text: I'm glad you are happy today. You deserve happiness. Write down three things that madfe you happy today. Even this small act of gratitude will boost your positivity.
   utter_self_harm:
   - text: You are beautiful and worth more than you think. I'm pretty sure you have handled things worse than this. A healthcare provider can also help you work through your symptoms by giving you information and coping methods. If you're feeling suicidal and need help right now, call the National Suicide Prevention Lifeline in the U.S. at 1-800-273-8255.
   - text: You may be afraid that you will get overwhelmed or be stuck with the pain. But the truth is that emotions quickly come and go if you let them. It's only when you obsess over the feeling that it persists. If you're feeling suicidal and need help right now, call the National Suicide Prevention Lifeline in the U.S. at 1-800-273-8255.
   utter_reassurance:
-  - text: I can crack you a joke if you want.
   - text: Here is something to cheer you up
-    custom : 
+    custom:
       video: https://i.imgur.com/HcyqZ3k.mp4
   - text: Here is something to make you smile
     image: https://i.imgur.com/nGF1K8f.jpg
   - text: Check this out, to make you smile
-    custom : 
+    custom:
       video: https://i.imgur.com/g0rKCLa.mp4
   utter_self_doubt:
   - text: Be kind to yourself. It may be challenging, but focus on treating yourself with kindness.
   - text: When you notice negative self-talk, look for ways that you can reframe those thoughts in a more positive or realistic way. Instead of thinking "I'll never be able to do it," for example, you might say, "I can do small things each day to improve."
   utter_default:
   - text: Sorry I don't understand, can you rephase your question?
+  utter_happy:
+  - text: Great, carry on!
+  utter_did_that_help:
+  - text: Did that help you?
 actions:
+- utter_333_rule
 - utter_acknowledge_provided_info
 - utter_ask_for_user_name_info
+- utter_depression_cause
+- utter_depression_meaning
 - utter_did_that_help
+- utter_difference_psychotherapy_counselling
 - utter_feeling_angry
 - utter_feeling_bored
 - utter_feeling_depressed
@@ -260,8 +269,15 @@ actions:
 - utter_feeling_sad
 - utter_feeling_scared
 - utter_goodbye
-- utter_happy
 - utter_greet
+- utter_happy
+- utter_iamabot
+- utter_intro
+- utter_lack_of_sleep
+- utter_low_sugar_suicidal_thoughts
 - utter_reassurance
 - utter_self_doubt
 - utter_self_harm
+- utter_top_depression_age_group
+- utter_treatment
+- utter_what_can_you_do

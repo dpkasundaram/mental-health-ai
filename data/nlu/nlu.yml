@@ -1,6 +1,6 @@
 version: "3.0"
 nlu:
-- intent: greet
+- intent: intro
   examples: |
     - hey
     - hello
@@ -80,6 +80,13 @@ nlu:
     - Which country tops depression?
     - Which is the country with high depression rate?
     - What is the country with the highest depression? 
+- intent: low_depression_country
+  examples: |
+    - Which country has the lowest rate of depression?
+    - Which country has less depressed people?
+    - Which country is least in depression?
+    - Which is the country with less depression rate?
+    - What is the country with the lowest depression?
 - intent: affirm
   examples: |
     - yes
@@ -410,6 +417,11 @@ nlu:
     - What is triggering depression?
     - How does depression gets triggered?
     - How depression affects the world?
+    
+- intent: types_of_depression
+  examples: |
+    - What are the types of depression?
+    - What are the different types of depression?
 
 - intent: oversleep_depression
   examples: |
@@ -702,6 +714,18 @@ nlu:
     - Do yo have any tips ?
     - Can you recommend anything ?
     - any tips
+    - Can you cheer me up?
+    - Can you crack me up?
+    - Can you tell me a joke?
+    - Can you make me smile?
+    - can you make me laugh?
+- intent: what_can_you_do
+  examples: |
+    - What can you do ?
+    - What can you do for me?
+    - What is your purpose?
+    - What is your use?
+    - What do you do?
 - intent: thanks
   examples: |
     - Thanks.
