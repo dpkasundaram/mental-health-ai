@@ -1,0 +1,74 @@
+version: "3.0"
+nlu:
+- intent: intro
+  examples: |
+    - hi
+- intent: supply_user_name_info
+  examples: |
+    - i am [krish](PERSON)
+    - i am leui
+    - i'm [yuan yang](PERSON)
+    - i'm yan
+    - i'm [roy](PERSON)
+    - i am [lee](PERSON)
+- intent: depression_meaning
+  examples: |
+    - what is depression?
+- intent: depression_cause
+  examples: |
+    - what are the causes of depression?
+- intent: top_depression_age_group
+  examples: |
+    - what are the top age group of depression?
+- intent: treatment
+  examples: |
+    - what are the treament available?
+- intent: difference_psychotherapy_counselling
+  examples: |
+    - what is the difference between psychotherapy and counseling?
+- intent: low_sugar_suicidal_thoughts
+  examples: |
+    - does low blood sugar cause depression?
+- intent: thanks
+  examples: |
+    - thanks
+    - hehe thanks it helps
+    - thanks it helps
+- intent: affirm
+  examples: |
+    - yes
+- intent: goodbye
+  examples: |
+    - nice talking to you
+    - bye
+- intent: greet
+  examples: |
+    - how are you?
+    - how are you doing today?
+- intent: bot_challenge
+  examples: |
+    - are you human?
+- intent: what_can_you_do
+  examples: |
+    - what can you do for me?
+- intent: try_tip
+  examples: |
+    - can you crack me a joke?
+- intent: mood_lonely
+  examples: |
+    - i am lonely
+- intent: mood_unhappy
+  examples: |
+    - i feel depressed
+- intent: self_doubt
+  examples: |
+    - no one like me . i'm not worth it
+- intent: lack_of_sleep
+  examples: |
+    - does lack of sleep make you feel sad?
+- intent: 333_rule
+  examples: |
+    - how to deal with anxiety?
+- intent: try
+  examples: |
+    - i will try

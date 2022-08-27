@@ -1,0 +1,98 @@
+
+version: "3.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: intro
+  - action: utter_intro
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+    entities:
+    - PERSON: krish
+  - slot_was_set:
+    - PERSON: krish
+  - slot_was_set:
+    - PERSON: krish
+  - action: utter_acknowledge_provided_info
+  - intent: depression_meaning
+  - action: utter_depression_meaning
+  - intent: depression_cause
+  - action: utter_depression_cause
+  - intent: top_depression_age_group
+  - action: utter_top_depression_age_group
+  - intent: treatment
+  - action: utter_treatment
+  - intent: difference_psychotherapy_counselling
+  - action: utter_difference_psychotherapy_counselling
+  - intent: low_sugar_suicidal_thoughts
+  - action: utter_low_sugar_suicidal_thoughts
+  - intent: thanks
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: intro
+  - action: utter_intro
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+  - action: utter_acknowledge_provided_info
+- story: interactive_story_2
+  steps:
+  - intent: intro
+  - action: utter_intro
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+    entities:
+    - PERSON: roy
+  - slot_was_set:
+    - PERSON: roy
+  - slot_was_set:
+    - PERSON: roy
+  - action: utter_acknowledge_provided_info
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: what_can_you_do
+  - action: utter_what_can_you_do
+  - intent: try_tip
+  - action: utter_reassurance
+  - intent: thanks
+  - action: utter_did_that_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: intro
+  - action: utter_intro
+  - action: utter_ask_for_user_name_info
+  - intent: supply_user_name_info
+    entities:
+    - PERSON: lee
+  - slot_was_set:
+    - PERSON: lee
+  - slot_was_set:
+    - PERSON: lee
+  - action: utter_acknowledge_provided_info
+  - intent: mood_lonely
+  - action: utter_feeling_lonely
+  - intent: mood_unhappy
+  - action: utter_feeling_depressed
+  - intent: self_doubt
+  - action: utter_self_doubt
+  - intent: lack_of_sleep
+  - action: utter_lack_of_sleep
+  - intent: 333_rule
+  - action: utter_333_rule
+  - intent: try
+  - action: utter_reassurance
+  - intent: thanks
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye

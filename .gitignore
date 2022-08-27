@@ -118,7 +118,7 @@ replicated.yml
 travis_gcloud_auth.json
 
 # rasa cache
-.rasa
+.rasa/
 .rasa/*
 
 # Rasa stuff
